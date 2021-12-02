@@ -24,7 +24,7 @@ class CocheJ extends VehiculoJ {
     }
 
     gasto(consumo = 5.7) {
-        console.log(this.nombre + ' del año ' + this.anyo + ' se ha movido ' + this.kilometros +
+        return (this.nombre + ' del año ' + this.anyo + ' se ha movido ' + this.kilometros +
             'KM, teniendo en cuenta que el ' + super.gasto(consumo) + ' este ha gastado: ' +
             (this.kilometros / 100 * consumo) + 'L');
 
@@ -56,7 +56,7 @@ class CocheT extends VehiculoT {
     }
 
     gasto(consumo = 3.7) {
-        console.log(this.nombre + ' del año ' + this.anyo + ' se ha movido ' + this.kilometros +
+        return (this.nombre + ' del año ' + this.anyo + ' se ha movido ' + this.kilometros +
             'KM, teniendo en cuenta que el ' + super.gasto(consumo) + ' este ha gastado: ' +
             (this.kilometros / 100 * consumo) + 'L');
 
@@ -64,6 +64,6 @@ class CocheT extends VehiculoT {
 }
 var cocheT = new CocheT('Audi', 2011, 500);
 console.log("Coche creado por TypeScript: ");
-cocheT.gasto();
+console.log(cocheT.gasto());
 
 console.log('Fin de ejemploClases...');

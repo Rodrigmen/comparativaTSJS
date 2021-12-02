@@ -35,7 +35,7 @@ var CocheJ = /** @class */ (function (_super) {
     }
     CocheJ.prototype.gasto = function (consumo) {
         if (consumo === void 0) { consumo = 5.7; }
-        console.log(this.nombre + ' del año ' + this.anyo + ' se ha movido ' + this.kilometros +
+        return (this.nombre + ' del año ' + this.anyo + ' se ha movido ' + this.kilometros +
             'KM, teniendo en cuenta que el ' + _super.prototype.gasto.call(this, consumo) + ' este ha gastado: ' +
             (this.kilometros / 100 * consumo) + 'L');
     };
@@ -64,7 +64,7 @@ var CocheT = /** @class */ (function (_super) {
     }
     CocheT.prototype.gasto = function (consumo) {
         if (consumo === void 0) { consumo = 3.7; }
-        console.log(this.nombre + ' del año ' + this.anyo + ' se ha movido ' + this.kilometros +
+        return (this.nombre + ' del año ' + this.anyo + ' se ha movido ' + this.kilometros +
             'KM, teniendo en cuenta que el ' + _super.prototype.gasto.call(this, consumo) + ' este ha gastado: ' +
             (this.kilometros / 100 * consumo) + 'L');
     };
@@ -72,5 +72,5 @@ var CocheT = /** @class */ (function (_super) {
 }(VehiculoT));
 var cocheT = new CocheT('Audi', 2011, 500);
 console.log("Coche creado por TypeScript: ");
-cocheT.gasto();
+console.log(cocheT.gasto());
 console.log('Fin de ejemploClases...');
